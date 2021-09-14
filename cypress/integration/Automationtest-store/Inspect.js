@@ -1,6 +1,6 @@
 /// <reference types="cypress"/>
 
-describe("Automation test store  wedisite - contacts us form module " ,() => {
+describe("Automation test store  wedisite - contacts us form modules    " ,() => {
 
     it("Scenario1 -user should able to create new contact us from succesfully  ",()=> {
         cy.visit("https://automationteststore.com/")
