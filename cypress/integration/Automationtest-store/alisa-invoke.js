@@ -1,6 +1,6 @@
 /// <reference types="cypress"/>
 
-describe("alisa and invoke  " ,() => {
+describe("alisa and invoke - auomation site   " ,() => {
 
     it("Scenario1 - validate a specific hair care products  ",()=> {
 
