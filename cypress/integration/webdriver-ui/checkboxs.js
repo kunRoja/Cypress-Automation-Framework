@@ -3,7 +3,8 @@
 describe("Webdriver uni wedisite - checkboxs model " ,() => {
 
     beforeEach(function() {
-        cy.visit("http://www.webdriveruniversity.com/")
+        cy.visit("/") 
+        // we set baseurl in cypress.json file it will pick up from their 
         
         cy.get('#dropdown-checkboxes-radiobuttons').invoke('removeAttr','target').click({force : true})
      
@@ -58,7 +59,7 @@ describe("Webdriver uni wedisite - checkboxs model " ,() => {
         cy.get('#radio-buttons').find("input[type='radio']").eq(0).check() // 3rd way -1st radio buttonby passing index form 0 
 
     });
-    it.only("Scenario5 - radio buttons",()=> {
+    it("Scenario5 - radio buttons",()=> {
         // cy.visit("http://www.webdriveruniversity.com/")
         // cy.get('#dropdown-checkboxes-radiobuttons').invoke('removeAttr','target').click({force : true})
 

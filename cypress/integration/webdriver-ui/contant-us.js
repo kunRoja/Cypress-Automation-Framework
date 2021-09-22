@@ -1,5 +1,7 @@
 /// <reference types="cypress"/>
 
+const cypress = require("cypress");
+
 //const { data } = require("cypress/types/jquery");
 
 describe("Webdriver uni wedisite - contacts us form module " ,() => {
@@ -10,6 +12,11 @@ describe("Webdriver uni wedisite - contacts us form module " ,() => {
        // this.data =data;
      globalThis.data = data;
       })
+      });
+
+      beforeEach(function (){
+
+        cy.visit(cypress.env("webdriverui_homepage")+"/Contact-Us/contactus.html")
       });
 
     it("Scenario1 -user should able to login into application succesfully  ",()=> {

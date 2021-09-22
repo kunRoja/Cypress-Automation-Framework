@@ -48,23 +48,23 @@ describe(" Handling js alerts  " ,() => {
     })
 
 
-    it.only("Scenario4 - ok and cancel buttons in alerts - clickin on cancel button ",()=> {
-        cy.visit("http://www.webdriveruniversity.com/")
-        cy.get('#popup-alerts').invoke('removeAttr','target').click({force : true})
+    // it("Scenario4 - ok and cancel buttons in alerts - clickin on cancel button ",()=> {
+    //     cy.visit("http://www.webdriveruniversity.com/")
+    //     cy.get('#popup-alerts').invoke('removeAttr','target').click({force : true})
    
-       // 2nd way to check the text
-       const stub  = cy.stub() // creating a stud - stub is type of storage -it store a result
-       cy.on('window:alert',stub) // align the stud to an event 
-        //then is promise 
-       cy.get('#button4').click().then(() =>{ 
-            expect(stub.getCall(0)).to.be.calledWith('Press a button!')
-       }).then(() =>{
-           // means click on ok in alert pop up
-           return true;
-       })
-    //    .then(() =>{
-    //     cy.get('#confirm-alert-text').contains('You pressed OK!')
+    //    // 2nd way to check the text
+    //    const stub  = cy.stub() // creating a stud - stub is type of storage -it store a result
+    //    cy.on('window:alert',stub) // align the stud to an event 
+    //     //then is promise 
+    //    cy.get('#button4').click().then(() =>{ 
+    //         expect(stub.getCall(0)).to.be.calledWith('Press a button!')
+    //    }).then(() =>{
+    //        // means click on ok in alert pop up
+    //        return true;
     //    })
-    });
+    // //    .then(() =>{
+    // //     cy.get('#confirm-alert-text').contains('You pressed OK!')
+    // //    })
+    // });
 
 })

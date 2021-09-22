@@ -4,12 +4,16 @@
   "description": "Test project with cypress automation framework",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "triggerAllTests-headless": "npx cypress run",
+    "triggerAllTests-headed": "npx cypress run --headed",
+    "triggerAllTests-chrome": "npx cypress run --browser chrome",
+    "triggerAllTests-dashboard": "npx cypress run --record --key d42e4517-1631-4a9f-9e23-272ffe4d6527",
+    "triggerAllTests-webdriveruni": "npx cypress run --spec cypress/integration/webdriver-ui/*"
   },
   "author": "ROJA",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "^4.12.1",
+    "cypress": "^4.5.0",
     "cypress-file-upload": "^5.0.8",
     "cypress-xpath": "^1.6.2"
   }
